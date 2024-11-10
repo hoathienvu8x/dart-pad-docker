@@ -1,6 +1,7 @@
 FROM google/dart
 
 # install redis, protobuf and zip/unzip tool
+RUN curl -fsSL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN apt update -y
 RUN apt install -y redis-server protobuf-compiler zip unzip
 #RUN service snapd start
